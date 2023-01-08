@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="/hello.do" class="com.rick.controller.HelloController"/>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 配置前缀：去哪个目录下找视图 -->
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <!-- 配置后缀：找以.jsp为后缀的视图 -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+</beans>
